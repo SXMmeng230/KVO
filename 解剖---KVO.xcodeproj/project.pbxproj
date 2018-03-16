@@ -15,6 +15,8 @@
 		AA2967C21ED7FE39000B7FB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA2967C01ED7FE39000B7FB1 /* LaunchScreen.storyboard */; };
 		AA2967CD1ED7FE39000B7FB1 /* _____KVOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2967CC1ED7FE39000B7FB1 /* _____KVOTests.m */; };
 		AA2967D81ED7FE39000B7FB1 /* _____KVOUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2967D71ED7FE39000B7FB1 /* _____KVOUITests.m */; };
+		AA2967E71ED7FE53000B7FB1 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2967E61ED7FE53000B7FB1 /* Person.m */; };
+		AA46BD2F1ED951F40006987B /* NSObject+KVO.m in Sources */ = {isa = PBXBuildFile; fileRef = AA46BD2E1ED951F40006987B /* NSObject+KVO.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		AA2967D31ED7FE39000B7FB1 /* 解剖---KVOUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "解剖---KVOUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA2967D71ED7FE39000B7FB1 /* _____KVOUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____KVOUITests.m"; sourceTree = "<group>"; };
 		AA2967D91ED7FE39000B7FB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA2967E51ED7FE53000B7FB1 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		AA2967E61ED7FE53000B7FB1 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		AA46BD2D1ED951F40006987B /* NSObject+KVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KVO.h"; sourceTree = "<group>"; };
+		AA46BD2E1ED951F40006987B /* NSObject+KVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KVO.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,10 @@
 				AA2967B61ED7FE39000B7FB1 /* AppDelegate.m */,
 				AA2967B81ED7FE39000B7FB1 /* ViewController.h */,
 				AA2967B91ED7FE39000B7FB1 /* ViewController.m */,
+				AA46BD2D1ED951F40006987B /* NSObject+KVO.h */,
+				AA46BD2E1ED951F40006987B /* NSObject+KVO.m */,
+				AA2967E51ED7FE53000B7FB1 /* Person.h */,
+				AA2967E61ED7FE53000B7FB1 /* Person.m */,
 				AA2967BB1ED7FE39000B7FB1 /* Main.storyboard */,
 				AA2967BE1ED7FE39000B7FB1 /* Assets.xcassets */,
 				AA2967C01ED7FE39000B7FB1 /* LaunchScreen.storyboard */,
@@ -275,6 +285,8 @@
 			files = (
 				AA2967BA1ED7FE39000B7FB1 /* ViewController.m in Sources */,
 				AA2967B71ED7FE39000B7FB1 /* AppDelegate.m in Sources */,
+				AA46BD2F1ED951F40006987B /* NSObject+KVO.m in Sources */,
+				AA2967E71ED7FE53000B7FB1 /* Person.m in Sources */,
 				AA2967B41ED7FE39000B7FB1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,6 +438,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = "解剖---KVO/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "www.-----KVO";
@@ -437,6 +450,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = "解剖---KVO/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "www.-----KVO";
@@ -509,6 +523,7 @@
 				AA2967DE1ED7FE39000B7FB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AA2967DF1ED7FE39000B7FB1 /* Build configuration list for PBXNativeTarget "解剖---KVOTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +532,7 @@
 				AA2967E11ED7FE39000B7FB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AA2967E21ED7FE39000B7FB1 /* Build configuration list for PBXNativeTarget "解剖---KVOUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +541,7 @@
 				AA2967E41ED7FE39000B7FB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

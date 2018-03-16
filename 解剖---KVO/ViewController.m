@@ -7,9 +7,10 @@
 //
 
 #import "ViewController.h"
-
+#import "Person.h"
+#import "NSObject+KVO.h"
 @interface ViewController ()
-
+@property (nonatomic, copy) Person *person;
 @end
 
 @implementation ViewController
@@ -17,8 +18,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-}
+     _person = [[Person alloc] init];
+    _person.name = [NSString stringWithFormat:@"%d",2];
 
+//    [_person addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionNew context:nil];
+    [_person xy_addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionNew context:nil];
+}
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
+{
+    NSLog(@"keypaht= %@  %@",keyPath,change);
+}
+- (IBAction)clickBtn:(UIButton *)sender
+{
+    static NSInteger i = 1;
+    i++;
+    _person.name = [NSString stringWithFormat:@"%d",i];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
